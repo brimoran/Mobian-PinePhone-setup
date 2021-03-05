@@ -117,7 +117,7 @@ Add to git settings in web git service.
 
 # Chromium
 
-Obviously optional.
+Obviously optional.  See https://forum.pine64.org/showthread.php?tid=12497&page=2
 
 ``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
 
