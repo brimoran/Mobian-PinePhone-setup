@@ -114,3 +114,19 @@ Decided not to install mapview and prophet.
 ``cat ~/.ssh/id_rsa.pub``
 
 Add to git settings in web git service.
+
+# Chromium
+
+Obviously optional.
+
+``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
+
+``flatpak search Chromium``
+
+``flatpak install org.chromium.Chromium``
+
+Then:
+
+``scale-to-fit Chromium on``
+
+Then head to the webstore and install the ``Mobile View`` extension.
