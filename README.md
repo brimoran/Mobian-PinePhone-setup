@@ -131,17 +131,43 @@ Then:
 
 Then head to the webstore and install the ``Mobile View`` extension.
 
-Prevent Sleep in an SSH session
+# Tweaks
 
-Since “inactivity” in the Power settings in Phosh consider only interactions with the screen, it may happen that the device goes into sleep mode while you are accessing it via SSH from another machine. To prevent this, add this little section to the end of your ~/.bashrc:
+## Prevent Sleep in an SSH session
 
-`` if [[ -n $SSH_CONNECTION ]]; then
+``if [[ -n $SSH_CONNECTION ]]; then
   : $(gnome-session-inhibit --inhibit suspend \
         --reason "SSH connection is active" \
         --inhibit-only) &
-fi ``
-This section checks whether the SSH_CONNECTION environment variable is currently set (this is done if you ssh into your phone). If it is, meaning that the current shell is spawned via an SSH session, the code above will use gnome-session-inhibit to prevent the device to suspend/sleep. If the ssh-connection and thus the bash-session is killed, so is gnome-session-inhibit and the device is allowed to suspend again.
+fi``
 
+## Prefer dark themes
 
 `` ~/.config/gtk-3.0/settings.ini ``
+
+and add this to file:
+
+``[Settings]
+gtk-application-prefer-dark-theme = true``
+
+## Change icons
+
+The Uniform+ icons look good on the phone
+
+Download from https://yadi.sk/d/Xv4A4b2ukysic
+
+``cd Downloads``
+
+``tar -xvf 'Uniform+ icons.tar.gz'``
+
+``cd 'Uniform+ icons'/``
+
+``tar -xvf icons.tar.xz``
+
+``cd icons``
+
+``sudo mv Uniform+ /usr/share/icons/``
+
+``gsettings set org.gnome.desktop.interface icon-theme 'Uniform+'``
+
 
