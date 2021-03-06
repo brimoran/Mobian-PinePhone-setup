@@ -130,3 +130,18 @@ Then:
 ``scale-to-fit Chromium on``
 
 Then head to the webstore and install the ``Mobile View`` extension.
+
+Prevent Sleep in an SSH session
+
+Since “inactivity” in the Power settings in Phosh consider only interactions with the screen, it may happen that the device goes into sleep mode while you are accessing it via SSH from another machine. To prevent this, add this little section to the end of your ~/.bashrc:
+
+`` if [[ -n $SSH_CONNECTION ]]; then
+  : $(gnome-session-inhibit --inhibit suspend \
+        --reason "SSH connection is active" \
+        --inhibit-only) &
+fi ``
+This section checks whether the SSH_CONNECTION environment variable is currently set (this is done if you ssh into your phone). If it is, meaning that the current shell is spawned via an SSH session, the code above will use gnome-session-inhibit to prevent the device to suspend/sleep. If the ssh-connection and thus the bash-session is killed, so is gnome-session-inhibit and the device is allowed to suspend again.
+
+
+`` ~/.config/gtk-3.0/settings.ini ``
+
