@@ -154,22 +154,15 @@ gtk-application-prefer-dark-theme = true``
 
 ## Change icons
 
-The Uniform+ icons look good on the phone
+Icons that work well on the phone:
 
-Download from https://yadi.sk/d/Xv4A4b2ukysic
-
-``cd Downloads``
-
-``tar -xvf 'Uniform+ icons.tar.gz'``
-
-``cd 'Uniform+ icons'/``
-
-``tar -xvf icons.tar.xz``
-
-``cd icons``
-
-``sudo mv Uniform+ /usr/share/icons/``
-
-``gsettings set org.gnome.desktop.interface icon-theme 'Uniform+'``
+- Uniform+ (a few missing bits on the keyboard though)
+- Tela-circle
+- Numix-Circle
+- Cupertino-BigSur-iCons
 
 Get icon names from ``/usr/share/icons/``
+
+or from ``~/.local/share/icons``
+
+Change with for example: ``gsettings set org.gnome.desktop.interface icon-theme 'Cupertino-BigSur-iCons'``
