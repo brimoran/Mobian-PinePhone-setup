@@ -133,6 +133,8 @@ Then head to the webstore and install the ``Mobile View`` extension.
 
 # Tweaks
 
+https://wiki.mobian-project.org/doku.php?id=themes
+
 ## Prevent Sleep in an SSH session
 
 ``if [[ -n $SSH_CONNECTION ]]; then
@@ -170,4 +172,4 @@ Download from https://yadi.sk/d/Xv4A4b2ukysic
 
 ``gsettings set org.gnome.desktop.interface icon-theme 'Uniform+'``
 
-
+Get icon names from ``/usr/share/icons/``
