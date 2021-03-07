@@ -37,6 +37,8 @@ How I set up my PinePhone
 
 ``sudo apt install ncdu``
 
+``sudo apt install exfat-fuse exfat-utils``
+
 # Latex
 
 Download latest texlive:
