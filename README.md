@@ -105,7 +105,7 @@ Decided not to install mapview and prophet.
 
 ``pip3 install boto3``
 
-# Set up Git
+# Set up Git and SSH keys
 
 ``git config --global user.name "John Doe"``
 
@@ -116,6 +116,20 @@ Decided not to install mapview and prophet.
 ``cat ~/.ssh/id_rsa.pub``
 
 Add to git settings in web git service.
+
+Add some aliases to short cut commands, e.g.:
+
+Add public key to any servers you need to access:
+
+``ssh-copy-id -i ~/.ssh/id_rsa.pub YOURUSERNAMEE@SERVERIPADDRESS``
+
+``vim .bashrc``
+
+and add:
+
+alias work='ssh YOURUSERNAME@SERVERIPADDRESS'
+
+(note doesn't work if add to bash_profile)
 
 # Chromium
 
