@@ -1,9 +1,9 @@
 # Mobian-PinePhone-setup
-How I set up my PinePhone
+How I set up my PinePhone (amended).
 
 # Basics
 
-``apt install openssh-server``
+``sudo apt install openssh-server``
 
 ``ip addr # to get ip address``
 
@@ -11,33 +11,15 @@ How I set up my PinePhone
 
 ``sudo apt update``
 
-``sudo apt dist-upgrade``
+``sudo apt upgrade``
 
-``sudo apt autoremove``
+``apt install linux-image-5.11-sunxi64`` # upgrade to 5.11
 
-``cat /etc/issue`` # check version
+``sudo reboot``
 
 # Utils
 
-``sudo apt install git`` 
-
-``sudo apt install pandoc``
-
-``sudo apt install xlsx2csv``
-
-``sudo apt install ghostscript``
-
-``sudo apt install poppler-utils``
-
-``sudo apt install mosh``
-
-``sudo apt install zathura``
-
-``sudo apt install feh``
-
-``sudo apt install ncdu``
-
-``sudo apt install exfat-fuse exfat-utils``
+``sudo apt -y install git pandoc xlsx2csv ghostscript poppler-utils mosh zathura feh ncdu exfat-fuse exfat-utils`` 
 
 # Latex
 
@@ -45,14 +27,15 @@ Download latest texlive:
 
 ``wget "http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz"``
 
-
 ``tar -xzf install-tl-unx.tar.gz``
 
-``cd install-tl-20210302/``
+``cd install-tl-20210321/``
 
 ``sudo ./install-tl``
 
 press ``I``
+
+(Time used for installing the packages: 132:10)
 
 ``vim ~/.bashrc``
 
@@ -74,15 +57,12 @@ exit then:
 
 ## Required for packages
 
-``sudo apt install libxml2-dev``
+``sudo apt -y install libxml2-dev libssl-dev libcurl4-openssl-dev libgdal-dev libgit2-dev``
 
-``sudo apt install libssl-dev # for openssl for R``
-
-``sudo apt -y install libcurl4-openssl-dev # for curl for R``
-
-``sudo apt -y install libgdal-dev # for rgdal for R``
-
-``sudo apt -y install libgit2-dev # for devtools in R``
+libssl-dev # for openssl for R
+libcurl4-openssl-dev # for curl for R
+libgdal-dev # for rgdal for R
+libgit2-dev # for devtools in R
 
 ## Install (This will take a very long time)
 
@@ -95,7 +75,6 @@ Then from within R:
 ``install.packages(c("ggplot2","tidyverse","knitr","ggthemes","scales","ggmap","plotly","ggfortify","leaflet","leaflet.extras","rgdal","forecast","treemapify","dbscan","survival","googleVis","rmarkdown","flexdashboard","highcharter","devtools","maptools","treemap","networkD3","visNetwork","DiagrammeR","DT","ggcorrplot", "Hmisc", "anomalize", "fpp2", "h2o", "sweep", "timetk", "xgboost","survminer","ggwordcloud","this.path","mapproj"), repo = 'https://mac.R-project.org')``
 
 Decided not to install mapview and prophet.
-
 
 # Python stuff
 
