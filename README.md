@@ -19,7 +19,7 @@ How I set up my PinePhone (amended).
 
 # Utils
 
-``sudo apt -y install git pandoc xlsx2csv ghostscript poppler-utils mosh zathura feh ncdu exfat-fuse exfat-utils`` 
+``sudo apt -y install git pandoc xlsx2csv ghostscript poppler-utils mosh zathura feh ncdu exfat-fuse exfat-utils htop`` 
 
 # Latex
 
@@ -156,6 +156,14 @@ and then in R
 ``install.packages("flexdashboard") # works``
 
 ``install.packages("treemap") #works``
+
+Finally out of R let's create an .Rprofile file to set the number of CPUs:
+
+``vim ~/.Rprofile``
+
+and add to it:
+
+``options(Ncpus = 3)``
 
 # Python stuff
 
