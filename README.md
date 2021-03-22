@@ -60,8 +60,11 @@ exit then:
 ``sudo apt -y install libxml2-dev libssl-dev libcurl4-openssl-dev libgdal-dev libgit2-dev``
 
 libssl-dev # for openssl for R
+
 libcurl4-openssl-dev # for curl for R
+
 libgdal-dev # for rgdal for R
+
 libgit2-dev # for devtools in R
 
 ## Install (This will take a very long time)
@@ -82,31 +85,54 @@ Left this overnight but there were many failed installs...
 So let's try installing the remaining packages that didn't work individually:
 
 ``install.packages("ggplot2") # works``
-``install.packages("tidyverse") # works``
-``install.packages("ggthemes") # works``
-``install.packages("ggmap") # works``
-``install.packages("plotly") # works``
-``install.packages("ggfortify") # works``
-``install.packages("leaflet") # works``
-``install.packages("leaflet.extras") # works``
-``install.packages("forecast") # works``
-``install.packages("treemapify") # works``
-``install.packages("rmarkdown") # works``
-``install.packages("flexdashboard") # fails probably ‘httpuv’, ‘shiny’, ‘flexdashboard’``
-``install.packages("highcharter") # works``
-``install.packages("devtools") # works``
-``install.packages("rgeos") # works - required for maptools``
-``install.packages("treemap") # fails probably ‘httpuv’, ‘shiny’, ‘treemap’``
-``install.packages("networkD3") # works``
-``install.packages("visNetwork") # works``
-``install.packages("DiagrammeR") # works``
-``install.packages("ggcorrplot") # works``
-``install.packages("Hmisc") # works``
-``install.packages("anomalize") # works``
-``install.packages("fpp2") # works``
-``install.packages("survminer") # works``
-``install.packages("ggwordcloud") # works``
 
+``install.packages("tidyverse") # works``
+
+``install.packages("ggthemes") # works``
+
+``install.packages("ggmap") # works``
+
+``install.packages("plotly") # works``
+
+``install.packages("ggfortify") # works``
+
+``install.packages("leaflet") # works``
+
+``install.packages("leaflet.extras") # works``
+
+``install.packages("forecast") # works``
+
+``install.packages("treemapify") # works``
+
+``install.packages("rmarkdown") # works``
+
+``install.packages("flexdashboard") # fails probably ‘httpuv’, ‘shiny’, ‘flexdashboard’``
+
+``install.packages("highcharter") # works``
+
+``install.packages("devtools") # works``
+
+``install.packages("rgeos") # works - required for maptools``
+
+``install.packages("treemap") # fails probably ‘httpuv’, ‘shiny’, ‘treemap’``
+
+``install.packages("networkD3") # works``
+
+``install.packages("visNetwork") # works``
+
+``install.packages("DiagrammeR") # works``
+
+``install.packages("ggcorrplot") # works``
+
+``install.packages("Hmisc") # works``
+
+``install.packages("anomalize") # works``
+
+``install.packages("fpp2") # works``
+
+``install.packages("survminer") # works``
+
+``install.packages("ggwordcloud") # works``
 
 DT also installed as part of this.
 
@@ -122,9 +148,13 @@ So
 and then in R
 
 ``options(Ncpus = 4)``
+
 ``install.packages("httpuv") # works but takes a long time``
+
 ``install.packages("shiny") # works``
+
 ``install.packages("flexdashboard") # works``
+
 ``install.packages("treemap") #works``
 
 # Python stuff
