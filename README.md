@@ -261,3 +261,11 @@ Copy .vimrc from git and then install VimPlug:
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim``
 
 Enter Vim and install with :PlugInstall
+
+# Flatpak software
+
+``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo # add repo``
+
+e.g. Fragments:
+
+``flatpak install flathub de.haeckerfelix.Fragments``
