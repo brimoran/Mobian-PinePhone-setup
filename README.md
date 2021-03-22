@@ -19,7 +19,7 @@ How I set up my PinePhone (amended).
 
 # Utils
 
-``sudo apt -y install git pandoc xlsx2csv ghostscript poppler-utils mosh zathura feh ncdu exfat-fuse exfat-utils htop`` 
+``sudo apt -y install git pandoc xlsx2csv ghostscript poppler-utils mosh zathura feh ncdu exfat-fuse exfat-utils htop curl`` 
 
 # Latex
 
@@ -252,3 +252,12 @@ Get icon names from ``/usr/share/icons/``
 or from ``~/.local/share/icons``
 
 Change with for example: ``gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle'``
+
+# Vim
+
+Copy .vimrc from git and then install VimPlug:
+
+``curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim``
+
+Enter Vim and install with :PlugInstall
