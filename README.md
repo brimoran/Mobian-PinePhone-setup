@@ -72,9 +72,60 @@ libgit2-dev # for devtools in R
 
 Then from within R:
 
+parallel::detectCores() # 4 cores
+options(Ncpus = 4) # this is probably aggressive but we won't be doing anything else whilst we install packages
+
 ``install.packages(c("ggplot2","tidyverse","knitr","ggthemes","scales","ggmap","plotly","ggfortify","leaflet","leaflet.extras","rgdal","forecast","treemapify","dbscan","survival","googleVis","rmarkdown","flexdashboard","highcharter","devtools","maptools","treemap","networkD3","visNetwork","DiagrammeR","DT","ggcorrplot", "Hmisc", "anomalize", "fpp2", "h2o", "sweep", "timetk", "xgboost","survminer","ggwordcloud","this.path","mapproj"), repo = 'https://mac.R-project.org')``
 
-Decided not to install mapview and prophet.
+Left this overnight but there were many failed installs...
+
+So let's try installing the remaining packages that didn't work individually:
+
+``install.packages("ggplot2") # works``
+``install.packages("tidyverse") # works``
+``install.packages("ggthemes") # works``
+``install.packages("ggmap") # works``
+``install.packages("plotly") # works``
+``install.packages("ggfortify") # works``
+``install.packages("leaflet") # works``
+``install.packages("leaflet.extras") # works``
+``install.packages("forecast") # works``
+``install.packages("treemapify") # works``
+``install.packages("rmarkdown") # works``
+``install.packages("flexdashboard") # fails probably ‘httpuv’, ‘shiny’, ‘flexdashboard’``
+``install.packages("highcharter") # works``
+``install.packages("devtools") # works``
+``install.packages("rgeos") # works - required for maptools``
+``install.packages("treemap") # fails probably ‘httpuv’, ‘shiny’, ‘treemap’``
+``install.packages("networkD3") # works``
+``install.packages("visNetwork") # works``
+``install.packages("DiagrammeR") # works``
+``install.packages("ggcorrplot") # works``
+``install.packages("Hmisc") # works``
+``install.packages("anomalize") # works``
+``install.packages("fpp2") # works``
+``install.packages("survminer") # works``
+``install.packages("ggwordcloud") # works``
+
+
+DT also installed as part of this.
+
+Trying to sort out the couple of fails which relate to httpuv and shiny
+
+ERROR: failed to lock directory ‘/usr/local/lib/R/site-library’ for modifying
+Try removing ‘/usr/local/lib/R/site-library/00LOCK-httpuv’
+
+So
+
+``sudo rm -r /usr/local/lib/R/site-library/00LOCK-httpuv``
+
+and then in R
+
+``options(Ncpus = 4)``
+``install.packages("httpuv") # works but takes a long time``
+``install.packages("shiny") # works``
+``install.packages("flexdashboard") # works``
+``install.packages("treemap") #works``
 
 # Python stuff
 
