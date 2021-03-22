@@ -159,9 +159,7 @@ and then in R
 
 # Python stuff
 
-``sudo apt install python3-pip``
-
-``sudo apt install python3-pandas``
+``sudo apt -y install python3-pip python3-pandas``
 
 ``pip3 install boto3``
 
@@ -179,17 +177,20 @@ Add to git settings in web git service.
 
 Add some aliases to short cut commands, e.g.:
 
+``vim ~/.bashrc``
+
+and add:
+
+``alias work='ssh YOURUSERNAME@SERVERIPADDRESS'``
+
+(note doesn't work if add to bash_profile but ~/.bash_aliases is an alternative)
+
+``source ~/.bashrc``
+
 Add public key to any servers you need to access:
 
 ``ssh-copy-id -i ~/.ssh/id_rsa.pub YOURUSERNAMEE@SERVERIPADDRESS``
 
-``vim .bashrc``
-
-and add:
-
-alias work='ssh YOURUSERNAME@SERVERIPADDRESS'
-
-(note doesn't work if add to bash_profile)
 
 # Chromium
 
@@ -213,6 +214,8 @@ https://wiki.mobian-project.org/doku.php?id=themes
 
 ## Prevent Sleep in an SSH session
 
+``vim ~/.bashrc``
+
 ``if [[ -n $SSH_CONNECTION ]]; then
   : $(gnome-session-inhibit --inhibit suspend \
         --reason "SSH connection is active" \
@@ -221,7 +224,7 @@ fi``
 
 ## Prefer dark themes
 
-`` ~/.config/gtk-3.0/settings.ini ``
+``vim ~/.config/gtk-3.0/settings.ini ``
 
 and add this to file:
 
@@ -232,7 +235,6 @@ gtk-application-prefer-dark-theme = true``
 
 Icons that work well on the phone:
 
-- Uniform+ (a few missing bits on the keyboard though)
 - Tela-circle
 - Numix-Circle
 - Cupertino-BigSur-iCons
@@ -241,4 +243,4 @@ Get icon names from ``/usr/share/icons/``
 
 or from ``~/.local/share/icons``
 
-Change with for example: ``gsettings set org.gnome.desktop.interface icon-theme 'Cupertino-BigSur-iCons'``
+Change with for example: ``gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle'``
